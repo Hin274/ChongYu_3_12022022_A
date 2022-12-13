@@ -1,4 +1,5 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap');
+
+@use "../utils/variables" as *;
 
  .logo {
     font-family:$logo-font-family;
@@ -10,6 +11,18 @@
 
  .heading{
     font-family: $heading-font-family;
+}
+
+h1{
+   font-family: $heading-font-family;
+}
+
+h2{
+   font-family: $heading-font-family;
+}
+
+h3{
+   font-family: $heading-font-family;
 }
 
 p{
