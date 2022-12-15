@@ -1,9 +1,14 @@
 @use "../utils/variables" as *;
 // @use "../utils" as *;
 
-@mixin container-header-base() {
+@mixin container-flex-base() {
   display: flex;
   justify-content: center;
+}
+
+@mixin container-grid-base() {
+  display: grid;
+  justify-items: center;
 }
 
 @mixin button-base() {
@@ -12,6 +17,7 @@
   border-radius: 25px;
   border-style: none;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
   font-family: $body-font-family;
 }
 
