@@ -1,0 +1,27 @@
+@use "../utils/" as *;
+
+.container-footer{
+background-color: darken($color: $background, $amount: 80);
+padding: $padding $paddingx2;
+
+&-logo--font{
+    color: darken($color: white, $amount: 3);
+    font-family: $logo-font-family;
+    font-size: $logo-font-size;
+    font-weight: 400;
+}
+
+&-links{
+    color: darken($color: white, $amount: 3);
+    font-family: $body-font-family;
+    line-height: $line-height*3;
+    
+}
+
+&__icon{
+    padding-right: $padding;
+}
+
+}
+
+
