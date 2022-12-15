@@ -1,0 +1,54 @@
+@use "../utils/" as *;
+
+.container-content {
+  background-color: lighten($color: $background, $amount: 3);
+  padding: $paddingx2 * 2 $paddingx2;
+}
+
+.container-cards {
+  @include container-grid-base();
+  gap: $gapx2;
+}
+
+.restaurant-card {
+  width: 100%;
+  border-radius: 25px;
+  background-color: white;
+  position: relative;
+
+  &__img {
+    border-radius: 25px 25px 0px 0px;
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+  }
+
+  &__new {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    border-radius: 3px;
+    background-color: $tertiary;
+    padding: $padding $paddingx2 * 2;
+    color: darken($color: $tertiary, $amount: 40);
+    font-weight: 700;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 $padding;
+    padding-bottom: $padding;
+
+    &__text{
+      line-height: $line-height;
+    }
+  }
+
+  &__favourite {
+    font-size: $icon-size;
+    align-self: center;
+    padding: 0 $padding;
+  }
+}
