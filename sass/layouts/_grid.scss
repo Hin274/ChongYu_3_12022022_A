@@ -1,0 +1,36 @@
+// base layout classes
+
+.container-header {
+  grid-area: header;
+}
+
+.container-content {
+  grid-area: content;
+}
+
+.container-footer {
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  grid-template-areas:
+    "header header header"
+    "header header header"
+    "header header header"
+    "header header header"
+    "content content content"
+    "content content content"
+    "content content content"
+    "content content content"
+    "footer footer footer";
+}
+
+.menu-overlap-image {
+  display: grid;
+  grid-row-start: 4;
+  grid-row-end: 9;
+  margin-top: 2rem;
+}
