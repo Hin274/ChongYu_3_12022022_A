@@ -23,7 +23,7 @@
 }
 
 @mixin button-gradient-purple() {
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(165deg,#ff79da, #9356dc);
   color: white;
   padding: $padding * 1.5 $paddingx2;
 }
