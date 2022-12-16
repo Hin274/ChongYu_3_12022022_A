@@ -8,108 +8,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="images/logo/ohmyfood.png" type="image/x-icon" rel="icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
-<body>
-    <header>
-        <div>
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-            <img src="images/logo/ohmyfood.png" alt="ohmyfood logo">
+<body class="container">
+    <header class="container-header">
+        <div class="container-logo container-logo--justify container-logo--gap">
+            <a class="container-logo__icon" href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img class="container-logo__img" src="images/logo/ohmyfood.png" alt="ohmyfood logo">
         </div>
         <div>
-            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+            <img class="container-header__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                 alt="The Enchanted Plate gourmet food on plate">
         </div>
     </header>
-    <main>
-        <div>
-            <h1>The Enchanted Plate</h1>
-            <i class="fa-regular fa-heart"></i>
+    <main class="container-content container-content--border">
+        <div class="container-restaurant">
+            <h1 class="container-restaurant-heading">The Enchanted Plate</h1>
+            <div class="container-restaurant-icon"><i class="fa-regular fa-heart"></i></div>
         </div>
-        <div>
+        <div class="container-menu">
             <div>
-                <h2>ENTREES</h2>
-                <button>
-                    <h3>Foie Gras Ravioli</h3>
-                    <p>With truffle cream</p>
-                    <p>25€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                <button>
-                    <h3>Oscietra Caviar</h3>
-                    <p>With buckwheat blinis</p>
-                    <p>35€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                <button>
-                    <h3>Lobster and Leek Foam</h3>
-                    <p>Marinated with orange zest</p>
-                    <p>20€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                <button>
-                    <h3>Duck Foie Gras</h3>
-                    <p>With fig jam and grilled baguette</p>
-                    <p>35€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
+                <h2 class="container-menu-heading">ENTREES</h2>
+                <div class="container-menu-item-layout">
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Foie Gras Ravioli</h3>
+                            <p>With truffle cream</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>25€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Oscietra Caviar</h3>
+                            <p>With Buckwheat Blinis</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>35€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Lobster and Leek Foam</h3>
+                            <p>Marinated with orange zest</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>20€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Duck Foie Gras</h3>
+                            <p>With fig jam and grilled baguette</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>35€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                </div>
             </div>
             <div>
-                <h2>MAIN DISH</h2>
-                <button>
-                    <h3>Fresh Buttered Scallops</h3>
-                    <p>With white celery puree</p>
-                    <p>40€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                <button>
-                    <h3>Pan-Fried Lobster</h3>
-                    <p>With mashed sweet potatoes</p>
-                    <p>35€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                <button>
-                    <h3>Braised Ox Tail</h3>
-                    <p>With wild rice and lemon zest</p>
-                    <p>44€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
+                <h2 class="container-menu-heading">MAIN DISH</h2>
+                <div class="container-menu-item-layout">
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3> Fresh Buttered Scallops</h3>
+                            <p>With white celery puree</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>40€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Pan-Fried Lobster</h3>
+                            <p>With mashed sweet potatoes</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>35€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Braised Ox Tail</h3>
+                            <p>With wild rice and lemon zest</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>44€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                </div>
             </div>
             <div>
-                <h2>DESSERTS</h2>
-                <button>
-                    <h3>Chocolate and Hazelnut Macaroon</h3>
-                    <p>With caramel butter ice cream</p>
-                    <p>18€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                <button>
-                    <h3>Baba au rhum</h3>
-                    <p>With lemon drizzle</p>
-                    <p>22€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                <button>
-                    <h3>Lemon Meringue Pie</h3>
-                    <p>Destructured</p>
-                    <p>23€</p>
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
+                <h2 class="container-menu-heading">DESSERTS</h2>
+                <div class="container-menu-item-layout">
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Chocolate and Hazelnut</h3>
+                            <p>With caramel butter ice cream</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>18€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Baba au rhum</h3>
+                            <p>With lemon drizzle</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>22€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                    <button class="container-menu-button">
+                        <div class="container-menu-dish">
+                            <h3>Lemon Meringue Pie</h3>
+                            <p>Destructured</p>
+                        </div>
+                        <div class="container-menu-price">
+                            <p>23€</p>
+                            <div><i class="fa-regular fa-circle-check"></i></div>
+                        </div>
+                    </button>
+                </div>
             </div>
-            <button>Order</button>
+            <div class="menu-order-button-layout">
+                <button class="menu-order-button">Order</button>
+            </div>
         </div>
     </main>
-    <footer>
-        <h1>ohmyfood</h1>
-        <ul>
+    <footer class="container-footer">
+        <h2 class="container-footer-logo--font">ohmyfood</h2>
+        <ul class="container-footer-links">
             <li>
-                <i class="fa-solid fa-utensils"></i>Suggest a restaurant
+                <span class="container-footer__icon"><i class="fa-solid fa-utensils"></span></i>Suggest a restaurant
             </li>
             <li>
-                <i class="fa-solid fa-handshake-angle"></i>Become a partner
+                <span class="container-footer__icon"><i class="fa-solid fa-handshake-angle"></span></i>Become a partner
             </li>
             <li>
                 Legal
