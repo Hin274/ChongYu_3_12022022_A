@@ -2,7 +2,7 @@
 
 .container-content {
   background-color: $background;
-  padding: $paddingx2 * 2 $paddingx2;
+  padding: $paddingx2 $paddingx2 $paddingx2 * 3 $paddingx2;
 }
 
 .container-cards {
@@ -130,5 +130,5 @@
 
 .menu-order-button-layout{
   @include container-grid-base();
-  padding: $paddingx2 0 $paddingx3 0;
+  padding: $paddingx2 0 0 0;
 }
