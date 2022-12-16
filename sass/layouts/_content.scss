@@ -1,7 +1,7 @@
 @use "../utils/" as *;
 
 .container-content {
-  background-color: lighten($color: $background, $amount: 3);
+  background-color: $background;
   padding: $paddingx2 * 2 $paddingx2;
 }
 
@@ -41,14 +41,94 @@
     padding: 0 $padding;
     padding-bottom: $padding;
 
-    &__text{
+    &__text {
       line-height: $line-height;
     }
   }
 
   &__favourite {
-    font-size: $icon-size;
+    font-size: $heart-size;
     align-self: center;
     padding: 0 $padding;
   }
+}
+
+.container-restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-heading {
+    font-family: $title-font-family;
+    font-weight: $font-weight-normal;
+    font-size: $title-font-size;
+  }
+
+  &-icon {
+    font-size: $heart-size;
+    align-self: center;
+    padding: 0 $padding;
+  }
+}
+
+.container-content--border {
+  border-radius: 25px 25px 0px 0px;
+}
+
+.container-menu {
+  display: grid;
+  gap: $gapx3;
+
+  &-item-layout {
+    display: grid;
+    gap: $gapx2;
+  }
+
+  &-heading {
+    font-weight: $font-weight-light;
+    position: relative;
+    font-size: $subheading-font-size;
+    padding-bottom: $padding;
+  }
+
+  &-heading::after {
+    content: "";
+    border-bottom: solid;
+    border-color: $tertiary;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 3rem;
+  }
+
+  &-button {
+    @include button-base();
+    background-color: lighten($color: $background, $amount: 0.5);
+    box-shadow: 0px 2px 3px 1px rgb(0 0 0 / 10%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $padding;
+  }
+
+  &-dish {
+    text-align: left;
+  }
+
+  &-price {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    font-weight: bold;
+  }
+}
+
+.menu-order-button {
+  @include button-base();
+  @include button-gradient-purple();
+  width: 10rem;
+}
+
+.menu-order-button-layout{
+  @include container-grid-base();
+  padding: $paddingx2 0 $paddingx3 0;
 }
