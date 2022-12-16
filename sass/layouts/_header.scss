@@ -70,7 +70,7 @@
 }
 
 .container-steps {
-  padding: $paddingx2 * 2 $paddingx2;
+  padding: 0 $paddingx2 $paddingx2 * 2 $paddingx2;
 
   &__title {
     padding: $padding 0;
