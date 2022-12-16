@@ -4,15 +4,28 @@
 .container-logo {
   @include container-flex-base();
   padding: $paddingx2;
-  background-color: lighten($color: $background, $amount: 3);
 
   &__icon {
-    width: 40px;
+    font-size: $arrow-size;
+    display: flex;
+    align-self: center;
   }
 
   &__img {
     width: $logo-img-size;
   }
+}
+
+.container-logo--justify{
+  justify-content: normal;
+}
+
+.container-logo--gap{
+  gap: $gap-icon-logo
+}
+
+.container-header__img{
+    width: 100%;
 }
 
 .container-location {
@@ -31,17 +44,17 @@
 }
 
 .bg-colour {
-  background-color: $background;
+  background-color: darken($color: $background, $amount: 2);
 }
 
 .container-intro {
   @include container-grid-base();
-  background-color: lighten($color: $background, $amount: 3);
+  background-color: $background;
   padding: $paddingx2;
   padding-bottom: $paddingx2 * 2;
 
   &__title {
-    font-size: $heading-font-size / 1.25;
+    font-size: calc($heading-font-size / 1.25);
   }
 
   &__text {
