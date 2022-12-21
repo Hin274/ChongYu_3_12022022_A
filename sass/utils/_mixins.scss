@@ -82,3 +82,8 @@
   z-index: 1;
   position: relative;
 }
+
+@mixin fade-animation() {
+  transition: opacity 700ms;
+  animation: fade 5000ms ease-in-out 1;
+}

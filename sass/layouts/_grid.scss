@@ -1,15 +1,65 @@
+@use "../utils/" as *;
+
 // base layout classes
 
 .container-header {
   grid-area: header;
+
+  &--fade-in {
+    @include fade-animation();
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 .container-content {
   grid-area: content;
+
+  &--fade-in {
+    @include fade-animation();
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 .container-footer {
   grid-area: footer;
+
+  &--fade-in {
+    @include fade-animation();
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 .container {
