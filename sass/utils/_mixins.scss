@@ -17,13 +17,11 @@
   border-radius: 25px;
   border-style: none;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
-  transition: 0.3s;
-  font-family: $body-font-family;
   background-color: $background;
 }
 
 @mixin button-gradient-purple() {
-  background: linear-gradient(165deg,#ff79da, #9356dc);
+  background: linear-gradient(165deg, #ff79da, #9356dc);
   color: white;
   padding: $padding * 1.5 $paddingx2;
 }
@@ -31,4 +29,56 @@
 @mixin roboto-500() {
   font-family: $body-font-family;
   font-weight: 500;
+}
+
+@mixin button-gradient-purple-hover-effect() {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    165deg,
+    lighten($color: #ff79da, $amount: 3),
+    lighten($color: #9356dc, $amount: 3)
+  );
+  box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
+@mixin button-hover-effect() {
+  content: "";
+  position: absolute;
+  background: lighten($color: #9356dc, $amount: 3);
+  box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
+@mixin icon-hover-effect() {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-right: $paddingx2;
+  opacity: 0;
+  transition: opacity 250ms;
+  color: $primary;
+}
+
+@mixin top-layer() {
+  z-index: 1;
+  position: relative;
 }
