@@ -128,6 +128,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 $padding;
+
   }
 
   &-dish {
@@ -165,4 +166,35 @@
 .menu-order-button-layout {
   @include container-grid-base();
   padding: $paddingx2 0 0 0;
+}
+
+.fade-scale {
+  animation: menuload 1500ms ease-in-out 1;
+  animation-delay: 250ms;
+
+  &--delay-1 {
+    animation-delay: 500ms;
+    
+  }
+  &--delay-2{
+    animation-delay: 750ms;
+  }
+  &--delay-3 {
+    animation-delay: 1000ms;
+  }
+  &--delay-4 {
+    animation-delay: 1250ms;
+  }
+}
+
+@keyframes menuload {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
