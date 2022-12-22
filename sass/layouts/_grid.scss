@@ -4,62 +4,14 @@
 
 .container-header {
   grid-area: header;
-
-  &--fade-in {
-    @include fade-animation();
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 }
 
 .container-content {
   grid-area: content;
-
-  &--fade-in {
-    @include fade-animation();
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 }
 
 .container-footer {
   grid-area: footer;
-
-  &--fade-in {
-    @include fade-animation();
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 }
 
 .container {
@@ -83,4 +35,20 @@
   grid-row-start: 4;
   grid-row-end: 9;
   margin-top: 1.7rem;
+}
+
+.fade-in {
+  @include fade-animation();
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
