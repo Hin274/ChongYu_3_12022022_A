@@ -129,6 +129,24 @@
     justify-content: space-between;
     padding: 0 $padding;
 
+    &:hover .container-menu-check {
+      opacity: 1;
+      width: 80px;
+    }
+
+    &:hover .fa-circle-check {
+      animation: check-rotate 500ms linear 1;
+      opacity: 1;
+      @keyframes check-rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
   }
 
   &-dish {
@@ -137,10 +155,30 @@
 
   &-price {
     display: flex;
-    align-self: flex-end;
-    align-items: center;
+    align-items: flex-end;
     font-weight: bold;
   }
+
+  &-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 25px 25px 0px;
+    background-color: $tertiary;
+    height: 94px;
+    width: 10px;
+    position: relative;
+    left: 10px;
+    transform-origin: right;
+    transition: width 500ms ease-in-out;
+    opacity: 0;
+  }
+}
+
+.fa-circle-check {
+  color: white;
+  font-size: $check-size;
+  opacity: 0;
 }
 
 .menu-order-button {
@@ -174,9 +212,8 @@
 
   &--delay-1 {
     animation-delay: 500ms;
-    
   }
-  &--delay-2{
+  &--delay-2 {
     animation-delay: 750ms;
   }
   &--delay-3 {
