@@ -85,17 +85,29 @@
 
   &__title {
     padding: $padding 0;
+
+    @media (min-width: 481px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .container-buttons {
     display: grid;
-    grid-auto-rows: auto;
     gap: $gapx2 * 1.2;
     padding-left: $padding;
+
+    @media (min-width: 481px){
+      justify-items: center;
+    }
+    @media (min-width: 1025px){
+     grid-template-columns: repeat(3,1fr);
+    }
   }
 
   &__button {
     @include button-base();
+    width: 20rem;
     padding: $paddingx2;
     display: flex;
     align-items: center;
