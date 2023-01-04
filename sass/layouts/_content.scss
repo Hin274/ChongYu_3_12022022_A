@@ -151,6 +151,13 @@
 
   &-dish {
     text-align: left;
+    min-width: 0;
+    & p {
+      white-space: nowrap;
+      width: 280px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   &-price {
