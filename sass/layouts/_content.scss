@@ -8,6 +8,14 @@
 .container-cards {
   @include container-grid-base();
   gap: $gapx2;
+
+  @media (min-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .restaurant-card {
@@ -35,22 +43,27 @@
   }
 
   &__info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
     padding: 0 $padding;
     padding-bottom: $padding;
 
     &__text {
       line-height: $line-height;
+      grid-column: 1/4;
+      grid-row: 1/3;
     }
   }
 
   &__favourite {
     font-size: $heart-size;
-    align-self: center;
     padding: 0 $padding;
     position: relative;
+    grid-column: 3/3;
+    grid-row: 1/3;
+    justify-self: flex-end;
+    align-self: center;
   }
 
   &__favourite::after {
@@ -151,7 +164,6 @@
 
   &-dish {
     text-align: left;
-    min-width: 0;
     & p {
       white-space: nowrap;
       width: 280px;
