@@ -1,27 +1,35 @@
 @use "../utils/" as *;
 
-.container-footer{
-background-color: darken($color: $background, $amount: 80);
-padding: $padding $paddingx2;
+.container-footer {
+  background-color: darken($color: $background, $amount: 80);
+  padding: $padding $paddingx2;
 
-&-logo--font{
+  &-logo--font {
     color: darken($color: white, $amount: 3);
     font-family: $logo-font-family;
     font-size: $logo-font-size;
     font-weight: 400;
-}
 
-&-links{
+    @media (min-width: 769px) {
+        text-align: center;
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
     color: darken($color: white, $amount: 3);
     font-family: $body-font-family;
-    line-height: $line-height*3;
-    
-}
+    gap: $gap;
 
-&__icon{
+    @media (min-width: 769px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+  }
+
+  &__icon {
     padding-right: $padding;
+  }
 }
-
-}
-
-
