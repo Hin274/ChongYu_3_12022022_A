@@ -18,6 +18,7 @@
   border-style: none;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
   background-color: $background;
+  cursor: pointer;
 }
 
 @mixin button-gradient-purple() {
