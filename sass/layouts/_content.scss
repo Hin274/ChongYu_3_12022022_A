@@ -118,9 +118,17 @@
   display: grid;
   gap: $gapx3;
 
+  @media (min-width: 1025px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   &-item-layout {
     display: grid;
     gap: $gapx2;
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &-heading {
@@ -175,6 +183,14 @@
       width: 280px;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @media (min-width: 481px) {
+        // width: 400px;
+      }
+
+      @media (min-width: 1025px) {
+        width: 230px;
+      }
     }
   }
 
@@ -229,6 +245,10 @@
 .menu-order-button-layout {
   @include container-grid-base();
   padding: $paddingx2 0 0 0;
+
+  @media (min-width: 1025px) {
+    grid-column: 2/2;
+  }
 }
 
 .fade-scale {
