@@ -5,6 +5,12 @@
   padding: $paddingx2 $paddingx2 $paddingx2 * 3 $paddingx2;
 }
 
+.content-heading {
+  @media (min-width: 769px) {
+    text-align: center;
+  }
+}
+
 .container-cards {
   @include container-grid-base();
   gap: $gapx2;
@@ -44,8 +50,8 @@
 
   &__info {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 0 $padding;
     padding-bottom: $padding;
 
