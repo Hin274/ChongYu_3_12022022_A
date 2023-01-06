@@ -1,5 +1,4 @@
 @use "../utils/variables" as *;
-// @use "../utils" as *;
 
 @mixin container-flex-base() {
   display: flex;
@@ -87,4 +86,10 @@
 @mixin fade-animation() {
   transition: opacity 700ms;
   animation: fade 5000ms ease-in-out 1;
+}
+
+@mixin text-overflow() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

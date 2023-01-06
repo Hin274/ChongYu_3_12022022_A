@@ -198,10 +198,12 @@
   &-dish {
     text-align: left;
     min-width: 0;
+    & h3 {
+      @include text-overflow();
+    }
+
     & p {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      @include text-overflow();
     }
   }
 
@@ -238,8 +240,7 @@
   @include button-base();
   @include button-gradient-purple();
   width: 10rem;
-  z-index: 1;
-  position: relative;
+  @include top-layer();
 
   &:hover {
     &::after {
