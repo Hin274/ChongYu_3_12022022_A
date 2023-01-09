@@ -1,17 +1,19 @@
 @use "../utils/" as *;
 
-
+//-----header container styling for logo and arrow------
 .container-logo {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   padding: $paddingx2;
 
+  //-----Back arrow on restaurant pages------
   &__icon {
     font-size: $arrow-size;
     display: flex;
     align-self: center;
   }
 
+  //-----logo styling on all pages------
   &__img {
     width: $logo-img-size;
     grid-column: 2/3;
@@ -19,28 +21,29 @@
   }
 }
 
+//-----restaurant image styling on restaurant pages------
 .container-header__img {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
 
-  @media (min-width: 481px){
+  @media (min-width: 481px) {
     aspect-ratio: 16/9;
-      }
-
-  @media (min-width: 769px){
-aspect-ratio: 21/9;
   }
 
-  @media (min-width: 1025px){
+  @media (min-width: 769px) {
+    aspect-ratio: 21/9;
+  }
+
+  @media (min-width: 1025px) {
     aspect-ratio: 30/9;
-      }
-
+  }
 }
-
+//-----location styling on home page------
 .container-location {
   @include container-flex-base();
   box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+  background-color: darken($color: $background, $amount: 2);
 
   &__title {
     @include roboto-500();
@@ -53,10 +56,7 @@ aspect-ratio: 21/9;
   }
 }
 
-.bg-colour {
-  background-color: darken($color: $background, $amount: 2);
-}
-
+//-----introduction styling on home page------
 .container-intro {
   @include container-grid-base();
   background-color: $background;
@@ -73,18 +73,21 @@ aspect-ratio: 21/9;
     text-align: center;
   }
 
+  //-----explore our restaurant button styling on home page------
   &__button {
     @include button-base();
     @include button-gradient-purple();
     z-index: 1;
     position: relative;
 
+    //-----explore our restaurant button after will be visible on hover on home page------
     &:hover {
       &::after {
         opacity: 1;
       }
     }
 
+    //-----explore our restaurant button after styling on home page------
     &::after {
       @include button-base();
       @include button-gradient-purple();
@@ -93,6 +96,7 @@ aspect-ratio: 21/9;
   }
 }
 
+//-----How it works styling on home page------
 .container-steps {
   padding: 0 $paddingx2 $paddingx2 * 2 $paddingx2;
 
@@ -109,14 +113,15 @@ aspect-ratio: 21/9;
     gap: $gapx2 * 1.2;
     padding-left: $padding;
 
-    @media (min-width: 481px){
+    @media (min-width: 481px) {
       justify-items: center;
     }
-    @media (min-width: 1025px){
-     grid-template-columns: repeat(3,1fr);
+    @media (min-width: 1025px) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
+  //-----How it works button styling on home page------
   &__button {
     @include button-base();
     cursor: default;
@@ -127,12 +132,14 @@ aspect-ratio: 21/9;
     font-weight: 700;
     @include top-layer();
 
+    //-----How it works button after will be visible on hover on home page------
     &:hover {
       &::after {
         opacity: 1;
       }
     }
 
+    //-----How it works button after styling on home page------
     &::after {
       @include button-base();
       cursor: default;
@@ -154,6 +161,7 @@ aspect-ratio: 21/9;
       color: white;
     }
 
+    //-----How it works icons on button and after styling on home page------
     &__icon {
       color: darken($color: $background, $amount: 30);
       padding-right: $paddingx2;
@@ -185,6 +193,7 @@ aspect-ratio: 21/9;
       }
     }
 
+    //-----When hovering on the how it works buttons the icons will change too------
     &:hover &__icon {
       &::after {
         opacity: 1;
@@ -192,4 +201,3 @@ aspect-ratio: 21/9;
     }
   }
 }
-

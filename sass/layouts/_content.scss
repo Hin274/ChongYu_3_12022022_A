@@ -1,5 +1,6 @@
 @use "../utils/" as *;
 
+//-----content styling on home page------
 .container-content {
   background-color: $background;
   padding: $paddingx2 $paddingx2 $paddingx2 * 3 $paddingx2;
@@ -11,6 +12,7 @@
   }
 }
 
+//-----restaurant cards styling on home page------
 .container-cards {
   @include container-grid-base();
   gap: $gapx2;
@@ -37,6 +39,7 @@
     object-fit: cover;
   }
 
+  //----- new banner  styling on restaurant cards on home page------
   &__new {
     position: absolute;
     top: 0rem;
@@ -62,6 +65,7 @@
     }
   }
 
+  //-----restaurant cards heart icon styling on home page------
   &__favourite {
     font-size: $heart-size;
     padding: 0 $padding;
@@ -72,6 +76,7 @@
     align-self: center;
   }
 
+  //-----restaurant cards heart icon after styling on home page------
   &__favourite::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -87,11 +92,13 @@
     transition: transform ease-in-out 1000ms;
   }
 
+  //-----restaurant cards heart after icon will be visible on hover on home page------
   &__favourite:hover::after {
     transform: scale(1, 1);
   }
 }
 
+//-----Menu styling on restaurant pages------
 .container-restaurant {
   display: flex;
   justify-content: space-between;
@@ -138,6 +145,7 @@
     padding-bottom: $padding;
   }
 
+  //-----Green underline on menu headings on restaurant pages------
   &-heading::after {
     content: "";
     border-bottom: solid;
@@ -148,6 +156,7 @@
     width: 3rem;
   }
 
+  //-----Menu item styling on restaurant pages------
   &-button {
     @include button-base();
     background-color: lighten($color: $background, $amount: 0.5);
@@ -157,6 +166,7 @@
     padding: 0 $padding;
     min-width: 20rem;
 
+    //-----Green box right to left animation on hovering menu items on restaurant pages------
     &:hover .container-menu-check {
       opacity: 1;
       animation: right-to-left 500ms linear 1;
@@ -176,6 +186,7 @@
       }
     }
 
+      //-----Check icon rotate animation inside the green box on hovering menu items on restaurant pages------
     &:hover .fa-circle-check {
       animation: check-rotate 500ms linear 1;
       opacity: 1;
@@ -213,6 +224,7 @@
     font-weight: bold;
   }
 
+    //-----Green box styling on menu items on restaurant pages------
   &-check {
     display: flex;
     align-items: center;
@@ -230,24 +242,28 @@
   }
 }
 
+ //-----check icon styling on menu items on restaurant pages------
 .fa-circle-check {
   color: white;
   font-size: $check-size;
   opacity: 0;
 }
 
+ //-----order button styling on restaurant pages------
 .menu-order-button {
   @include button-base();
   @include button-gradient-purple();
   width: 10rem;
   @include top-layer();
 
+  //-----order button after will be visible on hover on restaurant pages------
   &:hover {
     &::after {
       opacity: 1;
     }
   }
 
+  //-----order button after styling on restaurant pages------
   &::after {
     @include button-base();
     @include button-gradient-purple();
@@ -264,6 +280,7 @@
   }
 }
 
+//-----menu fade in animation when going on restaurant pages------
 .fade-scale {
   animation: menuload 1500ms ease-in-out 1;
   animation-delay: 250ms;
@@ -282,6 +299,7 @@
   }
 }
 
+//-----menu move up animation when going on restaurant pages------
 @keyframes menuload {
   0% {
     opacity: 0;

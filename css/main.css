@@ -175,6 +175,7 @@ ul {
   display: flex;
   justify-content: center;
   box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+  background-color: #ededed;
 }
 .container-location__title {
   font-family: "Roboto", san-serif;
@@ -184,10 +185,6 @@ ul {
 }
 .container-location__icon {
   align-self: center;
-}
-
-.bg-colour {
-  background-color: #ededed;
 }
 
 .container-intro {

@@ -1,6 +1,6 @@
 @use "../utils/" as *;
 
-// base layout classes
+//-----base layout classes for home page------
 
 .container-header {
   grid-area: header;
@@ -30,12 +30,16 @@
     "footer footer footer";
 }
 
+// -----restaurant pages menu to over the image-----
+
 .menu-overlap-image {
   display: grid;
   grid-row-start: 4;
   grid-row-end: 9;
   margin-top: 1.7rem;
 }
+
+// -----loading spinner on home page-----
 
 .loader {
   position: fixed;
@@ -48,6 +52,7 @@
   justify-content: center;
   transition: opacity 700ms;
 
+  // -----loading spinner styling on home page-----
   &::after {
     content: "";
     width: 120px;
@@ -59,6 +64,8 @@
     animation: loading 1000ms ease-in-out 3;
     opacity: 0;
   }
+
+  // -----loading spinner rotate and will scale up and down in size animation on home page-----
 
   @keyframes loading {
     0% {
@@ -90,6 +97,7 @@
   }
 }
 
+// -----After loading complete then home page will fade in-----
 .fade-in {
   @include fade-animation();
 }
