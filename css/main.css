@@ -603,8 +603,6 @@ ul {
   width: 10px;
   position: relative;
   left: 10px;
-  transform-origin: right;
-  transition: width 500ms ease-in-out;
   opacity: 0;
   overflow: hidden;
 }
