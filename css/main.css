@@ -560,7 +560,7 @@ ul {
   }
 }
 .container-menu-button:hover .fa-circle-check {
-  animation: check-rotate 500ms linear 1;
+  animation: check-rotate 500ms ease-in-out 1;
   opacity: 1;
 }
 @keyframes check-rotate {

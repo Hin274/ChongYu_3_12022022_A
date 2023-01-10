@@ -188,7 +188,7 @@
 
       //-----Check icon rotate animation inside the green box on hovering menu items on restaurant pages------
     &:hover .fa-circle-check {
-      animation: check-rotate 500ms linear 1;
+      animation: check-rotate 500ms ease-in-out 1;
       opacity: 1;
       @keyframes check-rotate {
         0% {
