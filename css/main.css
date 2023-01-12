@@ -164,7 +164,6 @@ ul {
 @media (min-width: 1025px) {
   .container-header__img {
     aspect-ratio: 21/9;
-    object-position: 50% 65%;
   }
 }
 
