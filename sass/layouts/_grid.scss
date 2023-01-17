@@ -38,3 +38,78 @@
   grid-row-end: 9;
   margin-top: 1.7rem;
 }
+
+// -----loading spinner on home page-----
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 700ms;
+
+  // -----loading spinner styling on home page-----
+  &::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 16px solid $tertiary;
+    border-top: 16px solid $primary;
+    border-bottom: 16px solid $secondary;
+    animation: loading 1000ms ease-in-out 3;
+    opacity: 0;
+  }
+
+  // -----loading spinner rotate and will scale up and down in size animation on home page-----
+
+  @keyframes loading {
+    0% {
+      opacity: 0;
+      transform: rotate(360deg) scale(0.25);
+    }
+    10% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+      transform: rotate(270deg) scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: rotate(180deg) scale(0.75);
+    }
+    75% {
+      opacity: 0.8;
+      transform: rotate(90deg) scale(1);
+    }
+    90% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.25);
+    }
+  }
+}
+
+// -----After loading complete then home page will fade in-----
+.fade-in {
+  @include fade-animation();
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
